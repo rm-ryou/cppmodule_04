@@ -24,9 +24,14 @@ Brain::~Brain()
 	std::cout << "Brain Destructor called." << std::endl;
 }
 
-const std::string&	Brain::getIdea(int i) const
+std::string&	Brain::getIdea(int i)
 {
-	return this->ideas_[i];
+	if (i >= 0 && i < this->ideaSize_)
+		return this->ideas_[i];
+	else {
+		std::cerr << "i is greater than or equal to 0 and less than or equal to " << this->ideaSize_ << std::endl;
+		return this->ideas_[0];
+	}
 }
 
 void	Brain::setIdea(int i, std::string idea)

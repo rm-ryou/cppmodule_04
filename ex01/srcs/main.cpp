@@ -46,6 +46,8 @@ int	main()
 			std::cout << animals[i]->getType() << "'s idea is " << animals[i]->getBrain()->getIdea(0) << std::endl;
 			std::cout << animals[i]->getType() << "'s idea is " << animals[i]->getBrain()->getIdea(2) << std::endl;
 			std::cout << animals[i]->getType() << "'s idea is " << animals[i]->getBrain()->getIdea(4) << std::endl;
+			std::cout << animals[i]->getType() << "'s idea is " << animals[i]->getBrain()->getIdea(2147483647) << std::endl;
+			std::cout << animals[i]->getType() << "'s idea is " << animals[i]->getBrain()->getIdea(-2147483648) << std::endl;
 		}
 		std::cout << "\x1b[31m***destructor***\x1b[39m" << std::endl;
 		for (int i = 0; i < AnimalSize; i++)
