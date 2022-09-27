@@ -6,6 +6,28 @@
 int	main()
 {
 	{
+		Dog	basic;
+		{
+			Dog	tmp = basic;
+		}
+	}
+	{
+		Dog	basic;
+		Dog	tmp1;
+		Dog	tmp2;
+
+		basic = tmp1;
+		basic = tmp2;
+	}
+	{
+		Cat	basic;
+		Cat	tmp1;
+		Cat	tmp2;
+
+		basic = tmp1;
+		basic = tmp2;
+	}
+	{
 		std::cout << "\x1b[31m***constructor***\x1b[39m" << std::endl;
 		const Animal*	meta = new Animal();
 		const Animal*	j = new Dog();
